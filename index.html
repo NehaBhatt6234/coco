@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> NEHA</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff0e6;
+      color: #333;
+      animation: fadeIn 1s ease-in;
+    }
+    header {
+      background: linear-gradient(to right, #ff5f6d, #ffc371);
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .main {
+      display: grid;
+      grid-template-columns: 3fr 1fr;
+      gap: 20px;
+      padding: 30px;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background-color: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      padding: 15px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      overflow: hidden;
+      position: relative;
+    }
+    .card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      transition: transform 0.3s ease;
+    }
+    .card:hover img {
+      transform: scale(1.2);
+    }
+    .card h4 {
+      margin-bottom: 8px;
+      font-size: 18px;
+      color: #d14d72;
+    }
+    .card input {
+      width: 60px;
+      padding: 6px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    .cart {
+      background: #fff;
+      padding: 20px;
+      border-radius: 16px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+    .cart h3 {
+      margin-bottom: 10px;
+      font-size: 20px;
+      color: #333;
+    }
+    .cart-item {
+      margin: 10px 0;
+    }
+    .total {
+      font-weight: bold;
+      margin-top: 15px;
+    }
+    button {
+      padding: 12px 24px;
+      background: linear-gradient(to right, #00b09b, #96c93d);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      margin-top: 10px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background: linear-gradient(to right, #009688, #7cb342);
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    🛒 ORDER UR FAV BECAUSE UR FAV IS OUR PRIORITY (U R IMPORTANT TO US)
+  </header>
+
+  <div class="main">
+    <div class="products">
+      <div class="card">
+        <img src="veg combo.jpeg" alt="Veg Combo">
+        <h4>Veg Combo 🍱 - ₹150</h4>
+        Qty: <input type="number" min="0" value="0" data-name="Veg Combo" data-price="150" />
+      </div>
+      <div class="card">
+        <img src="chocolate.jpeg" alt="Choco Shake">
+        <h4>Choco Shake 🥤 - ₹90</h4>
+        Qty: <input type="number" min="0" value="0" data-name="Choco Shake" data-price="90" />
+      </div>
+      <div class="card">
+        <img src="fries.jpeg" alt="Fries">
+        <h4>French Fries 🍟 - ₹70</h4>
+        Qty: <input type="number" min="0" value="0" data-name="French Fries" data-price="70" />
+      </div>
+      <div class="card">
+        <img src="classic burger.jpeg" alt="Classic Burger">
+        <h4>Classic Burger 🍔 - ₹60</h4>
+        Qty: <input type="number" min="0" value="0" data-name="Classic Burger" data-price="60" />
+      </div>
+      <div class="card">
+        <img src="chese burger.jpeg" alt="Cheese Burger">
+        <h4>Cheese Burger 🧀 - ₹80</h4>
+        Qty: <input type="number" min="0" value="0" data-name="Cheese Burger" data-price="80" />
+      </div>
+      <div class="card">
+        <img src="pizza.jpeg" alt="Paneer Pizza">
+        <h4>Paneer Pizza 🍕 - ₹140</h4>
+        Qty: <input type="number" min="0" value="0" data-name="Paneer Pizza" data-price="140" />
+      </div>
+      <div class="card">
+        <img src="dosa.jpeg" alt="Sweet Dosa">
+        <h4>Sweet Dosa 🍯 - ₹95</h4>
+        Qty: <input type="number" min="0" value="0" data-name="Sweet Dosa" data-price="95" />
+      </div>
+      <div class="card">
+        <img src="ice.jpeg" alt="Ice Cream">
+        <h4>Ice Cream 🍨 - ₹60</h4>
+        Qty: <input type="number" min="0" value="0" data-name="Ice Cream" data-price="60" />
+      </div>
+      <div class="card">
+        <img src="cake.jpeg" alt="Brownie">
+        <h4>Chocolate Brownie 🍫 - ₹70</h4>
+        Qty: <input type="number" min="0" value="0" data-name="Chocolate Brownie" data-price="70" />
+      </div>
+    </div>
+
+    <div class="cart">
+      <h3>🧾 Cart Summary</h3>
+      <div id="cart-details"></div>
+      <div class="total" id="total"></div>
+      <button onclick="calculateCart()">Calculate Total</button>
+    </div>
+  </div>
+
+  <script>
+    function calculateCart() {
+      const inputs = document.querySelectorAll('.products input');
+      let cartDetails = "";
+      let total = 0;
+
+      inputs.forEach(input => {
+        const qty = parseInt(input.value);
+        const name = input.getAttribute('data-name');
+        const price = parseFloat(input.getAttribute('data-price'));
+        if (qty > 0) {
+          const subtotal = qty * price;
+          cartDetails += `${name} x ${qty} = ₹${subtotal}<br>`;
+          total += subtotal;
+        }
+      });
+
+      const tax = total * 0.05;
+      const offer = total > 500 ? 50 : 0;
+      const grand = total + tax - offer;
+
+      cartDetails += `<br><strong>Tax (5%): ₹${tax.toFixed(2)}</strong>`;
+      if (offer > 0) cartDetails += `<br><strong>Offer: -₹${offer}</strong>`;
+      document.getElementById("cart-details").innerHTML = cartDetails;
+      document.getElementById("total").innerHTML = `<strong>Total: ₹${grand.toFixed(2)}</strong>`;
+    }
+  </script>
+</body>
+</html>

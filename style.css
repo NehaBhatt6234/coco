@@ -1,0 +1,86 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom right, #0f0f0f, #1a1a2e);
+  color: white;
+}
+
+.login-container, .home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+}
+
+.login-container input, .login-container button {
+  padding: 12px;
+  margin: 10px;
+  width: 250px;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+}
+
+.login-container button {
+  background-color: #e50914;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.login-container button:hover {
+  background-color: #ff2f40;
+}
+
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.category {
+  margin: 10px;
+  padding: 20px 30px;
+  background-color: #222;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: transform 0.3s, background 0.3s;
+  box-shadow: 0 4px 10px rgba(255,255,255,0.2);
+}
+
+.category:hover {
+  background-color: #e50914;
+  transform: scale(1.05);
+}
+
+.movies-section {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.movie-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.movie-card {
+  margin: 15px;
+  width: 200px;
+  height: 300px;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s;
+  box-shadow: 0 4px 10px rgba(255,255,255,0.2);
+}
+
+.movie-card:hover {
+  transform: scale(1.1);
+}
+
+.movie-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
